@@ -1,6 +1,0 @@
-use_frameworks!
-target 'react-native-amap3d_Tests' do
-  pod 'react-native-amap3d', :path => '../'
-  
-  
-end

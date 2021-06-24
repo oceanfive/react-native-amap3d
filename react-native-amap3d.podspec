@@ -1,42 +1,21 @@
-#
-# Be sure to run `pod lib lint react-native-amap3d.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
+
+version = '2.0.2'
+source = { :git => 'https://github.com/qiuxiang/react-native-amap3d.git', :tag => "v#{version}"}
 
 Pod::Spec.new do |s|
-  s.name             = 'react-native-amap3d'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of react-native-amap3d.'
+  s.name         = "react-native-amap3d"
+  s.version      = version
+  s.summary      = "react-native 高德地图组件，支持 Android + iOS"
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.authors      = { "Qiu Xiang" => "i@7c00.cc" }
+  s.homepage     = "https://github.com/qiuxiang/react-native-amap3d"
+  s.license      = "MIT"
+  s.platform     = :ios, "9.0"
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/oceanfive/react-native-amap3d'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'oceanfive' => '849638313@qq.com' }
-  s.source           = { :git => 'https://github.com/oceanfive/react-native-amap3d.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '9.0'
-
-  s.source_files = 'react-native-amap3d/Classes/**/*'
+  s.source       = version
+  s.source_files = 'lib/ios/**/*.{h,m}'
+  s.static_framework = true
   
-  # s.resource_bundles = {
-  #   'react-native-amap3d' => ['react-native-amap3d/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'React'
+  s.dependency 'AMap3DMap', "~> 7.9.0"
 end
